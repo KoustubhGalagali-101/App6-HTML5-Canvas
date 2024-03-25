@@ -51,21 +51,10 @@ function reset_myCanvas(){
   myCanvas.width = myCanvas.width;
 }
 //Function resets the canvas by equaling the current width to the original width
-function image_myCanvas(){
-
-console.log("image_myCanvas function called"); //Uses console log for troubleshooting	
-	
+function image_myCanvas(){	
   var myCanvas_canvas = document.getElementById("myCanvas");
   var myCanvas_context = myCanvas_canvas.getContext("2d");
   var img = document.getElementById("scream");
-
-function = img.onload(){
-	
-    console.log("Image loaded successfully");
-    console.log("Image dimensions: " + img.width + "x" + img.height);
-	
-    myCanvas_context.drawImage(img, 150, 150, img.width, img.height);
-    };
 }
 </script>
 
