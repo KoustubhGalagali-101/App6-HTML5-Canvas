@@ -55,7 +55,10 @@ function image_myCanvas(){
   var myCanvas_canvas = document.getElementById("myCanvas");
   var myCanvas_context = myCanvas_canvas.getContext("2d");
   var img = document.getElementById("scream");
-  myCanvas_context.drawImage(img,150,150)
+
+img.onload = function() {
+    myCanvas_context.drawImage(img, 150, 150, myCanvas_canvas.width, myCanvas_canvas.height);
+    };
 }
 </script>
 
