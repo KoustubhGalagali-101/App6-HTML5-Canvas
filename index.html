@@ -50,7 +50,13 @@ function reset_myCanvas(){
   var myCanvas_canvas = document.getElementById("myCanvas");
   myCanvas.width = myCanvas.width;
 }
-	
+
+function image_myCanvas(){
+  var myCanvas_canvas = document.getElementById("myCanvas");
+  var myCanvas_context = myCanvas_canvas.getContext("2d");
+  var img = document.getElementById("scream");
+  myCanvas_context.drawImage(img,150,150)
+}
 </script>
 
 
@@ -85,11 +91,16 @@ function reset_myCanvas(){
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
+	<p>Image to use:</p>
+        <img id="scream" src="img_the_scream.jpg" alt="The Scream" width="220" height="277">
+
 	<canvas id="myCanvas" width="300" height="150" style="border:1px solid #000000;"> </canvas>
 
 		<a onclick="draw_myCanvas();" class="w3-btn w3-grey w3-round"> Click for Rectangle </a>
 
 	        <a onclick="reset_myCanvas();" class="w3-btn w3-grey w3-round"> Click to Reset </a>
+
+	        <a onclick="image_myCanvas();" class="w3-btn w3-grey w3-round"> Click to Upload Image </a>
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
