@@ -39,10 +39,10 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-function draw_myCanvas() {
+function draw_myCanvas(){
   var myCanvas_canvas = document.getElementById("myCanvas");
-  var b_context = myCanvas_canvas.getContext("2d");
-  b_context.fillRect(0, 0, 300, 150);
+  var myCanvas_context = myCanvas_canvas.getContext("2d");
+  myCanvas_context.fillRect(0, 0, 300, 150);
 }
 	
 </script>
