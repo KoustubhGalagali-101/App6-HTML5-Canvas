@@ -55,8 +55,13 @@ function image_myCanvas(){
   var myCanvas_canvas = document.getElementById("myCanvas");
   var myCanvas_context = myCanvas_canvas.getContext("2d");
   var img = new Image();
-	img.src = "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg"
-	myCanvas_context.drawImage(img, 100, 150, 25, 50);
+	
+	img.onload = function(){
+	myCanvas_context.drawImage(img, 0, 0, 100, 150);
+        }
+	
+img.src = "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg";	
+	
 }
 </script>
 
