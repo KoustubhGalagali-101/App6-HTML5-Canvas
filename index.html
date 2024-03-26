@@ -33,9 +33,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
+<!--Creates the title and head of the page-->	
 
 <script>
-var myCanvas_canvas = document.getElementById("myCanvas"); //Creates the canvas and places an ID on it
+var myCanvas_canvas = document.getElementById("myCanvas"); //Creates the canvas variable and places an ID on it
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
@@ -54,8 +55,8 @@ function reset_myCanvas(){
 function name_myCanvas(){
   var myCanvas_canvas = document.getElementById("myCanvas"); //Defines myCanvas
   var myCanvas_context = myCanvas_canvas.getContext("2d"); //Defines drawing context
-  myCanvas_context.font = "30px Arial";
-  myCanvas_context.strokeText("Koustubh Galagali", 0, 150)
+  myCanvas_context.font = "30px Arial"; //Sets font
+  myCanvas_context.strokeText("Koustubh Galagali", 0, 75) //Sets coordinates for writing my name
 }
 	
 function image_myCanvas(){	
@@ -67,9 +68,10 @@ function image_myCanvas(){
 	myCanvas_context.drawImage(img, 0, 0, 100, 150);
         } //Creates an onload function so that the image appears in the canvas after its been loaded onto the website
 	
-img.src = "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg"; //Link for the image to load from
-	
+img.src = "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg"; //Link for the image to upload from
+
 }
+	
 </script>
 
 
@@ -92,7 +94,9 @@ img.src = "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg"; 
     z-index: 1;
 }
 </style>
-
+	
+<!--Establishes the style and format of the page-->
+	
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
@@ -105,17 +109,17 @@ img.src = "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg"; 
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
 	<p>Image to use:</p>
-        <img id="scream" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg" alt="The Scream" width="220" height="277">
+        <img id="scream" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg" alt="The Scream" width="220" height="277"> <!--Places the photo I will upload onto my canvas outside of the canvas first as a reference to the viewer-->
 
-	<canvas id="myCanvas" width="300" height="150" style="border:1px solid #000000;"> </canvas>
+	<canvas id="myCanvas" width="300" height="150" style="border:1px solid #000000;"> </canvas> <!--Draws canvas with border-->
 
-		<a onclick="draw_myCanvas();" class="w3-btn w3-grey w3-round"> Click for Rectangle </a>
+		<a onclick="draw_myCanvas();" class="w3-btn w3-grey w3-round"> Click for Rectangle </a> <!--Button to draw rectangle-->
 
-	        <a onclick="reset_myCanvas();" class="w3-btn w3-grey w3-round"> Click to Reset </a>
+	        <a onclick="reset_myCanvas();" class="w3-btn w3-grey w3-round"> Click to Reset </a> <!--Button to resets canvas-->
 
-	        <a onclick="image_myCanvas();" class="w3-btn w3-grey w3-round"> Click to Upload Image </a>
+	        <a onclick="image_myCanvas();" class="w3-btn w3-grey w3-round"> Click to Upload Image </a> <!--Button to upload image-->
 
-	        <a onclick="name_myCanvas();" class="w3-btn w3-grey w3-round"> Click to Write Name </a>
+	        <a onclick="name_myCanvas();" class="w3-btn w3-grey w3-round"> Click to Write Name </a> <!--Button to write my name-->
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
