@@ -41,26 +41,33 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
 function draw_myCanvas(){
-  var myCanvas_canvas = document.getElementById("myCanvas");
-  var myCanvas_context = myCanvas_canvas.getContext("2d");
-  myCanvas_context.fillRect(0, 0, 300, 150);
+  var myCanvas_canvas = document.getElementById("myCanvas"); //Defines myCanvas
+  var myCanvas_context = myCanvas_canvas.getContext("2d"); //Defines drawing context
+  myCanvas_context.fillRect(0, 0, 300, 150); //Function fills in the canvas with a rectangle
 }
-//Function fills in the canvas with a rectangle
+
 function reset_myCanvas(){
-  var myCanvas_canvas = document.getElementById("myCanvas");
-  myCanvas.width = myCanvas.width;
+  var myCanvas_canvas = document.getElementById("myCanvas"); //Defines myCanvas
+  myCanvas.width = myCanvas.width; //Sets width equal to itself so that the canvas can reset
 }
-//Function resets the canvas by equaling the current width to the original width
+
+function name_myCanvas(){
+  var myCanvas_canvas = document.getElementById("myCanvas"); //Defines myCanvas
+  var myCanvas_context = myCanvas_canvas.getContext("2d"); //Defines drawing context
+  myCanvas_context.font = "30px Arial";
+  myCanvas_context.strokeText("Koustubh Galagali", 0, 150)
+}
+	
 function image_myCanvas(){	
-  var myCanvas_canvas = document.getElementById("myCanvas");
-  var myCanvas_context = myCanvas_canvas.getContext("2d");
-  var img = new Image();
+  var myCanvas_canvas = document.getElementById("myCanvas"); //Defines myCanvas
+  var myCanvas_context = myCanvas_canvas.getContext("2d"); //Defines drawing context
+  var img = new Image(); //Defines img variable
 	
 	img.onload = function(){
 	myCanvas_context.drawImage(img, 0, 0, 100, 150);
-        }
+        } //Creates an onload function so that the image appears in the canvas after its been loaded onto the website
 	
-img.src = "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg";	
+img.src = "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg"; //Link for the image to load from
 	
 }
 </script>
@@ -107,6 +114,8 @@ img.src = "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg";
 	        <a onclick="reset_myCanvas();" class="w3-btn w3-grey w3-round"> Click to Reset </a>
 
 	        <a onclick="image_myCanvas();" class="w3-btn w3-grey w3-round"> Click to Upload Image </a>
+
+	        <a onclick="name_myCanvas();" class="w3-btn w3-grey w3-round"> Click to Write Name </a>
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
