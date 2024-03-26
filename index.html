@@ -54,7 +54,9 @@ function reset_myCanvas(){
 function image_myCanvas(){	
   var myCanvas_canvas = document.getElementById("myCanvas");
   var myCanvas_context = myCanvas_canvas.getContext("2d");
-  var img = document.getElementById("scream");
+  var img = new Image();
+	img.src = "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg"
+	contextImage.drawImage(img, 100, 150, 150, 150);
 }
 </script>
 
